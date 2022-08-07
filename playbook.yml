@@ -12,4 +12,4 @@
         dest: /app/spring-petclinic-2.7.0-SNAPSHOT.jar
         owner: webserver
     - name: 'Run pet-clinic'
-      shell: 'java -jar /app/spring-petclinic-2.7.0-SNAPSHOT.jar'
+      shell: 'java -jar /app/spring-petclinic-2.7.0-SNAPSHOT.jar </dev/null >/dev/null 2>&1 &'
