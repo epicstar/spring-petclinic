@@ -12,5 +12,6 @@
         dest: /app/spring-petclinic-2.7.0-SNAPSHOT.jar
         owner: webserver
     - name: 'Run pet-clinic'
-      shell: 'java -jar /app/spring-petclinic-2.7.0-SNAPSHOT.jar'
+      shell: 'java -jar /app/spring-petclinic-2.7.0-SNAPSHOT.jar &'
       async: 45
+      poll: 0
