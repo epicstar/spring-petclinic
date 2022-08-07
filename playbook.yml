@@ -4,9 +4,9 @@
     ansible_python_interpreter: /usr/bin/python3
   tasks:
     - name: 'Copy build to webserver'
-      ansible.builtin.copy:
+      copy:
         src: target/spring-petclinic-2.7.0-SNAPSHOT.jar
         dest: /app/spring-petclinic-2.7.0-SNAPSHOT.jar
         owner: webserver
     - name: 'Run pet-clinic'
-      shell: 'java -jar spring-petclinic-2.7.0-SNAPSHOT.jar'
+      shell: 'java -jar /app/spring-petclinic-2.7.0-SNAPSHOT.jar'
