@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Deploy') {
             steps {
-                ansiblePlaybook(credentialsId: 'petclinic-webserver-creds', inventory: 'ansible-config/inventory.yml', playbook: 'playbook.yml')
+                ansiblePlaybook(credentialsId: 'webserver-petclinic-ssh', inventory: 'ansible-config/inventory.yml', playbook: 'playbook.yml')
             }
         }
     }
